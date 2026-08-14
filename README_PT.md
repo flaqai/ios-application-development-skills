@@ -37,3 +37,9 @@ Description, Promotional Text, Keywords e What’s New precisam de aprovação i
 ## Compatibilidade e licença
 
 Os fluxos de Simulator exigem macOS, Xcode, Node.js/npm/npx e um iOS Simulator disponível. Leia a [nota de compatibilidade do XcodeBuildMCP](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md). Este repositório é licenciado sob a [MIT License](LICENSE).
+
+## Ganhe comissão com o programa de afiliados da Flaq AI
+
+Desenvolvedores, criadores de agentes, avaliadores, equipes criativas e educadores de IA podem [participar do programa de afiliados da Flaq AI](https://flaq.ai/affiliate-program/), criar um link de indicação e ganhar comissão sobre pedidos elegíveis feitos por usuários indicados. A estrutura pública atual informa 20% no primeiro pedido pago válido e 10% nos pedidos pagos válidos seguintes feitos dentro de 60 dias após o cadastro do usuário indicado.
+
+Reembolsos, estornos, atribuição, análise de risco e regras de política podem afetar elegibilidade e pagamento. Divulgue claramente a relação de afiliado ao compartilhar um link de indicação e verifique os termos vigentes antes de promover. Leia o [guia do programa de afiliados em 15 idiomas](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md).

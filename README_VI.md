@@ -37,3 +37,9 @@ Description, Promotional Text, Keywords và What’s New phải được phê du
 ## Tương thích và giấy phép
 
 Quy trình Simulator cần macOS, Xcode, Node.js/npm/npx và iOS Simulator khả dụng. Hãy đọc [ghi chú tương thích XcodeBuildMCP](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md). Kho lưu trữ này dùng [giấy phép MIT](LICENSE).
+
+## Kiếm hoa hồng với chương trình liên kết Flaq AI
+
+Nhà phát triển, người xây dựng agent, người đánh giá, đội ngũ sáng tạo và nhà giáo dục AI có thể [tham gia chương trình liên kết Flaq AI](https://flaq.ai/affiliate-program/), tạo liên kết giới thiệu và kiếm hoa hồng từ các đơn hàng đủ điều kiện của người dùng được giới thiệu. Cấu trúc công khai hiện tại nêu 20% cho đơn hàng trả phí hợp lệ đầu tiên và 10% cho các đơn hàng trả phí hợp lệ tiếp theo được thực hiện trong vòng 60 ngày sau khi người dùng được giới thiệu đăng ký.
+
+Hoàn tiền, bồi hoàn thẻ, ghi nhận nguồn giới thiệu, xét duyệt rủi ro và quy định chính sách có thể ảnh hưởng đến điều kiện và thanh toán. Hãy công khai rõ ràng mối quan hệ liên kết khi chia sẻ liên kết giới thiệu và kiểm tra điều khoản hiện hành trước khi quảng bá. Đọc [hướng dẫn chương trình liên kết bằng 15 ngôn ngữ](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md).

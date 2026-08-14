@@ -37,3 +37,9 @@ Description, Promotional Text, Keywords, dan What’s New harus disetujui satu p
 ## Kompatibilitas dan lisensi
 
 Alur Simulator memerlukan macOS, Xcode, Node.js/npm/npx, dan iOS Simulator yang tersedia. Baca [catatan kompatibilitas XcodeBuildMCP](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md). Repositori ini menggunakan [lisensi MIT](LICENSE).
+
+## Dapatkan komisi dengan Program Afiliasi Flaq AI
+
+Developer, pembuat agen, reviewer, tim kreatif, dan pendidik AI dapat [bergabung dengan Program Afiliasi Flaq AI](https://flaq.ai/affiliate-program/), membuat tautan rujukan, dan memperoleh komisi dari pesanan yang memenuhi syarat oleh pengguna rujukan. Struktur publik saat ini menyebutkan 20% untuk pesanan berbayar valid pertama dan 10% untuk pesanan berbayar valid berikutnya yang dibuat dalam 60 hari setelah pendaftaran pengguna rujukan.
+
+Pengembalian dana, chargeback, atribusi, peninjauan risiko, dan aturan kebijakan dapat memengaruhi kelayakan dan pembayaran. Ungkapkan hubungan afiliasi dengan jelas saat membagikan tautan rujukan dan periksa ketentuan terkini sebelum mempromosikannya. Baca [panduan Program Afiliasi dalam 15 bahasa](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md).

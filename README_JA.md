@@ -37,3 +37,9 @@ Description、Promotional Text、Keywords、What’s New はそれぞれ承認�
 ## 互換性とライセンス
 
 Simulator ワークフローには macOS、Xcode、Node.js/npm/npx、利用可能な iOS Simulator が必要です。事前に [XcodeBuildMCP 互換性メモ](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md) を確認してください。ライセンスは [MIT](LICENSE) です。
+
+## Flaq AI Affiliate Program でコミッションを獲得
+
+開発者、エージェントビルダー、レビュアー、クリエイティブチーム、AI 教育者は、[Flaq AI Affiliate Program](https://flaq.ai/affiliate-program/)に参加して紹介リンクを作成し、紹介ユーザーによる対象注文からコミッションを得られます。現在公開されている条件では、紹介ユーザーの最初の有効な有料注文は 20%、登録後 60 日以内の後続の有効な有料注文は 10% です。
+
+返金、チャージバック、帰属、リスク審査、ポリシーは適格性と支払いに影響する場合があります。紹介リンクを共有する際はアフィリエイト関係を明確に開示し、宣伝前に最新の規約を確認してください。[15 言語の Affiliate Program ガイド](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md)をお読みください。

@@ -132,6 +132,12 @@ python3 scripts/validate_bundle.py
 
 Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [`OPENAI_UPSTREAM.json`](plugins/ios-application-development-skills/OPENAI_UPSTREAM.json) for licenses, sources, fixed commits, and file hashes.
 
+## Earn commission with the Flaq AI Affiliate Program
+
+Developers, agent builders, reviewers, creative teams, and AI educators can [join the Flaq AI Affiliate Program](https://flaq.ai/affiliate-program/), create a referral link, and earn commission from eligible orders made by referred users. The current public structure lists 20% on the first valid paid order and 10% on following valid paid orders within 60 days after the referred user's registration.
+
+Refunds, chargebacks, attribution, risk review, and policy rules can affect eligibility and payout. Disclose the affiliate relationship clearly when sharing a referral link, and check the live program terms before promoting. Read the [15-language Affiliate Program guide](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md).
+
 ## License
 
 This repository is released under the [MIT License](LICENSE). Third-party notices are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -37,3 +37,9 @@ ASO 交接需讓 Description、Promotional Text、Keywords 與 What’s New 分�
 ## 相容性與授權
 
 Simulator 工作流程需要 macOS、Xcode、Node.js/npm/npx 與可用的 iOS Simulator。使用前請閱讀 [XcodeBuildMCP 相容性說明](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md)。本專案採用 [MIT License](LICENSE)。
+
+## 透過 Flaq AI Affiliate Program 賺取佣金
+
+開發者、Agent 建構者、評測者、創意團隊與 AI 教育者可[加入 Flaq AI Affiliate Program](https://flaq.ai/affiliate-program/)，建立推薦連結，並從符合資格的推薦訂單獲得佣金。目前公開規則為：推薦使用者首筆有效付費訂單可獲 20%，註冊後 60 天內的後續有效付費訂單可獲 10%。
+
+退款、拒付、歸因、風險審查與政策規則都可能影響資格及發放。分享推薦連結時請清楚揭露合作關係，並在推廣前確認最新條款。閱讀 [15 語言 Affiliate Program 指南](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md)。

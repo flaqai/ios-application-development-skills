@@ -37,3 +37,9 @@ Description, Promotional Text, Keywords und What’s New müssen einzeln freigeg
 ## Kompatibilität und Lizenz
 
 Simulator-Workflows benötigen macOS, Xcode, Node.js/npm/npx und einen verfügbaren iOS Simulator. Lesen Sie den [XcodeBuildMCP-Kompatibilitätshinweis](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md). Dieses Repository steht unter der [MIT-Lizenz](LICENSE).
+
+## Mit dem Flaq AI Affiliate Program Provision verdienen
+
+Entwickler, Agent-Builder, Reviewer, Kreativteams und KI-Lehrende können dem [Flaq AI Affiliate Program](https://flaq.ai/affiliate-program/) beitreten, einen Empfehlungslink erstellen und Provisionen aus berechtigten Bestellungen geworbener Nutzer verdienen. Die aktuelle öffentliche Struktur nennt 20 % für die erste gültige bezahlte Bestellung und 10 % für weitere gültige bezahlte Bestellungen innerhalb von 60 Tagen nach der Registrierung des geworbenen Nutzers.
+
+Erstattungen, Rückbuchungen, Zuordnung, Risikoprüfung und Richtlinien können Berechtigung und Auszahlung beeinflussen. Legen Sie die Affiliate-Beziehung beim Teilen eines Empfehlungslinks klar offen und prüfen Sie vor der Werbung die aktuellen Bedingungen. Lesen Sie den [Affiliate-Program-Guide in 15 Sprachen](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md).

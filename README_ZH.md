@@ -132,6 +132,12 @@ python3 scripts/validate_bundle.py
 
 第三方许可证、来源、固定提交和文件哈希见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 [`OPENAI_UPSTREAM.json`](plugins/ios-application-development-skills/OPENAI_UPSTREAM.json)。
 
+## 加入 Flaq AI Affiliate Program，获得推广佣金
+
+开发者、智能体构建者、评测者、创意团队和 AI 教育者可以[加入 Flaq AI Affiliate Program](https://flaq.ai/affiliate-program/)，创建推广链接，并从被推荐用户产生的符合条件订单中获得佣金。当前公开规则为：被推荐用户的首笔有效付费订单可获得 20% 佣金；注册后 60 天内的后续有效付费订单可获得 10% 佣金。
+
+退款、拒付、归因、风控审核和政策规则可能影响资格与实际发放。分享推广链接时请清晰披露推广关系，并在推广前核对最新项目条款。详见 [15 语种 Affiliate Program 指南](https://github.com/flaqai/awesome_seedance_2_5/blob/main/docs/flaq-affiliate-program.md)。
+
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)，第三方声明保留在 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
