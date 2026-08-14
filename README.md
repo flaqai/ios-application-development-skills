@@ -1,62 +1,92 @@
-# iOS Application Development Skills
+<p align="center">
+  <img src="assets/ios-development-skills-hero.png" alt="iOS Application Development Skills — App Store release, ASO, SwiftUI, and Simulator workflows" width="100%">
+</p>
 
-一个公开、可安装的 Codex Git Marketplace，提供单一插件 `ios-application-development-skills`。它把 App Store ASO、发布翻译与安全填表，以及 OpenAI 官方 Build iOS Apps 的完整 9 个技能整合在一起。
+<h1 align="center">iOS Application Development Skills</h1>
 
-当前插件版本：`0.1.0`。OpenAI 官方技能初始基线：`build-ios-apps` v0.1.2；上游按周检查，有变化时只创建审核 PR，绝不自动合并。
+<p align="center">
+  A Codex marketplace for shipping better iOS apps — from App Store metadata to SwiftUI and Simulator debugging.
+</p>
 
-## 安装
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-34C759.svg" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/plugin-v0.1.0-007AFF.svg" alt="Plugin version 0.1.0">
+  <img src="https://img.shields.io/badge/skills-11-5856D6.svg" alt="11 skills">
+  <img src="https://img.shields.io/badge/platform-Codex-0A84FF.svg" alt="Codex marketplace">
+</p>
+
+<p align="center">
+  <strong>English</strong> · <a href="README_ZH.md">简体中文</a> · <a href="README_ZH_TW.md">繁體中文</a> · <a href="README_JA.md">日本語</a> · <a href="README_KO.md">한국어</a><br>
+  <a href="README_ES.md">Español</a> · <a href="README_FR.md">Français</a> · <a href="README_DE.md">Deutsch</a> · <a href="README_PT.md">Português</a> · <a href="README_IT.md">Italiano</a><br>
+  <a href="README_AR.md">العربية</a> · <a href="README_RU.md">Русский</a> · <a href="README_ID.md">Bahasa Indonesia</a> · <a href="README_TH.md">ไทย</a> · <a href="README_VI.md">Tiếng Việt</a>
+</p>
+
+## One plugin, the iOS delivery workflow
+
+`ios-application-development-skills` is a public Codex Git Marketplace plugin that brings together safe App Store release operations, Apple-only ASO, and all nine OpenAI Build iOS Apps skills. It is designed as a practical path from product copy to a polished, debuggable iOS build.
+
+| Start with this need | Use this skill | What you get |
+| --- | --- | --- |
+| Audit an App Store listing or improve keywords, screenshots, and positioning | [`$app-store-aso`](plugins/ios-application-development-skills/skills/app-store-aso/SKILL.md) | Evidence-backed audit and approval-gated `aso-handoff.json` |
+| Prepare, translate, validate, or safely draft a release | [`$ios-appstore-release-manager`](plugins/ios-application-development-skills/skills/ios-appstore-release-manager/SKILL.md) | Flutter/Xcode version binding and a schema 8 release form |
+| Build or refactor a SwiftUI screen | [`$swiftui-ui-patterns`](plugins/ios-application-development-skills/skills/swiftui-ui-patterns/SKILL.md) · [`$swiftui-view-refactor`](plugins/ios-application-development-skills/skills/swiftui-view-refactor/SKILL.md) | Stable layouts, state flow, and maintainable views |
+| Reproduce a crash, performance issue, or memory leak | [`$ios-debugger-agent`](plugins/ios-application-development-skills/skills/ios-debugger-agent/SKILL.md) · ETTrace · Memgraph | Simulator evidence instead of guesswork |
+
+## Install in under a minute
 
 ```bash
 codex plugin marketplace add flaqai/ios-application-development-skills --ref main
 codex plugin add ios-application-development-skills@flaqai-ios
 ```
 
-插件启用后会配置 XcodeBuildMCP：
+Then ask Codex naturally, for example:
 
-```json
-{
-  "command": "npx",
-  "args": ["-y", "xcodebuildmcp@latest", "mcp"]
-}
+```text
+Audit this App Store listing and prepare an approved ASO handoff.
+Create a release form from this Flutter project and translate it to Japanese.
+Run the app in Simulator and diagnose why the onboarding screen crashes.
+Refactor this large SwiftUI view without changing its behavior.
 ```
 
-因此需要 macOS、Xcode、Node.js/npm/npx；Simulator 开发还需要可用的 iOS Simulator。MCP 可能在非开发任务中启动，如暂时不需要，请在 Codex 中禁用整个插件。
+## What is included
 
-OpenAI 上游的 `.mcp.json` 使用 `xcodebuildmcp@latest`，所以 MCP API 可能独立于技能文本发生变化。执行 Simulator 任务前必须检查当前暴露的工具 schema；若工具改名或参数不兼容，停止并报告，不猜测调用。当前已知边界见 [XCODEBUILDMCP_COMPATIBILITY.md](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md)。
+### App Store delivery
 
-## 11 个技能
-
-| 技能 | 适用场景 | 触发示例 | 主要依赖 |
-| --- | --- | --- | --- |
-| `$app-store-aso` | Apple App Store 页面审计、关键词、竞品、截图与预览、ASO 交接 | “审计这个 App Store 页面并生成四字段交接” | Web/Browser；公开页面或用户材料 |
-| `$ios-appstore-release-manager` | Flutter/Xcode 版本识别、发布文案、本地化、App Store Connect 安全填表 | “为 2.0.0 创建发布表单并翻译” | Python 3；可选 Browser/Computer Use |
-| `$ios-app-intents` | App Intents、App Entities、App Shortcuts | “让这个操作出现在 Siri 和快捷指令中” | Xcode/Swift |
-| `$ios-debugger-agent` | 构建、运行、UI 检查、日志和运行时排错 | “在 Simulator 运行并定位崩溃” | XcodeBuildMCP、Simulator |
-| `$ios-ettrace-performance` | ETTrace 启动与运行时性能分析 | “比较优化前后的启动耗时” | XcodeBuildMCP、Simulator |
-| `$ios-memgraph-leaks` | 泄漏、引用环、内存增长调查 | “抓取 memgraph 找 retain cycle” | XcodeBuildMCP、Simulator |
-| `$ios-simulator-browser` | 在 Codex 浏览器镜像 Simulator、SwiftUI Preview 热更新 | “把 Simulator 显示在浏览器里” | XcodeBuildMCP、Simulator、Swift package preview |
-| `$swiftui-liquid-glass` | iOS 26+ Liquid Glass 实现与审查 | “检查这个 Liquid Glass 界面是否正确” | Xcode/SwiftUI，iOS 26+ SDK |
-| `$swiftui-performance-audit` | SwiftUI 卡顿、昂贵更新、滚动性能代码审计 | “审计列表滚动为什么掉帧” | SwiftUI 源码；可选性能工具 |
-| `$swiftui-ui-patterns` | SwiftUI 导航、状态、布局、组件实现 | “按稳定模式实现这个 SwiftUI 页面” | Xcode/SwiftUI |
-| `$swiftui-view-refactor` | 拆分大型 View、收紧数据流与 Observation 所有权 | “重构这个 800 行 SwiftUI View” | Xcode/SwiftUI |
-
-## 如何选择
-
-| 目标 | 首选技能 | 需要时追加 |
+| Skill | Best for | Guardrails |
 | --- | --- | --- |
-| 优化 App Store 页面 | `$app-store-aso` | 获批后交给 `$ios-appstore-release-manager` |
-| 创建、翻译或填写版本 | `$ios-appstore-release-manager` | Browser/Computer Use 仅用于已登录页面 |
-| Simulator 中复现错误 | `$ios-debugger-agent` | 卡顿用 `$ios-ettrace-performance`，泄漏用 `$ios-memgraph-leaks` |
-| 构建 SwiftUI 页面 | `$swiftui-ui-patterns` | 大文件用 `$swiftui-view-refactor`，性能问题用 `$swiftui-performance-audit` |
-| iOS 26 视觉升级 | `$swiftui-liquid-glass` | 先用 `$swiftui-ui-patterns` 确认组件结构 |
-| 系统级快捷入口 | `$ios-app-intents` | 用 `$ios-debugger-agent` 做 Simulator 验证 |
-| 浏览器内展示 Simulator | `$ios-simulator-browser` | 运行时排错用 `$ios-debugger-agent` |
+| `$app-store-aso` | Apple App Store listing audits, competition, keywords, screenshots, previews, and positioning | Apple-only; separates facts, official rules, non-official benchmarks, and evidence gaps |
+| `$ios-appstore-release-manager` | Release forms, localization, Flutter/Xcode version detection, and App Store Connect drafting | Field-by-field approval, conflict checks, read-back after save, and stops before submission for review |
 
-## App Store ASO → 发布交接
+The two skills hand off through `aso-handoff.json` schema 1. Description, Promotional Text, Keywords, and What’s New must each be approved before an ASO handoff is marked `approved`. App Name and Subtitle remain recommendations; they are never changed automatically.
 
-`$app-store-aso` 只支持 Apple App Store。它会把事实、Apple 官方规范、行业非官方基准和推测明确分开；缺少页面数据时必须列出证据缺口。
+### OpenAI Build iOS Apps skills
 
-交接接口为 `aso-handoff.json` schema 1。Description、Promotional Text、Keywords、What's New 必须逐项获批，之后才能把总状态设为 `approved`。App Name 与 Subtitle 只作为 App Information 建议，不会自动写入发布表单。
+| Area | Skills |
+| --- | --- |
+| System surfaces | `$ios-app-intents` for App Intents, entities, App Shortcuts, Siri, and Spotlight |
+| Simulator workflow | `$ios-debugger-agent`, `$ios-simulator-browser` |
+| Performance and memory | `$ios-ettrace-performance`, `$ios-memgraph-leaks` |
+| SwiftUI implementation | `$swiftui-ui-patterns`, `$swiftui-view-refactor`, `$swiftui-performance-audit`, `$swiftui-liquid-glass` |
+
+All nine upstream skills preserve their original names, instructions, agents, references, scripts, and templates from the tracked OpenAI `build-ios-apps` v0.1.2 snapshot.
+
+## Release path: ASO to App Store Connect
+
+```text
+Public listing / product material
+        ↓
+$app-store-aso — audit, evidence, four field approvals
+        ↓
+approved aso-handoff.json
+        ↓
+$ios-appstore-release-manager — version binding, localization, validation
+        ↓
+App Store Connect draft — save and read back
+        ↓
+Stop before “Add for Review”
+```
+
+Create and finalize an ASO handoff:
 
 ```bash
 python3 plugins/ios-application-development-skills/skills/app-store-aso/scripts/aso_handoff.py \
@@ -64,20 +94,9 @@ python3 plugins/ios-application-development-skills/skills/app-store-aso/scripts/
 
 python3 plugins/ios-application-development-skills/skills/app-store-aso/scripts/aso_handoff.py \
   finalize /path/to/aso-handoff.json
-
-python3 plugins/ios-application-development-skills/skills/ios-appstore-release-manager/scripts/release_form.py \
-  import-aso /path/to/aso-handoff.json /path/to/release-form.md
 ```
 
-## 发布表单
-
-新表单使用 schema 8，并按以下顺序读取版本：
-
-1. 成对提供的 `--version` 与 `--build`；
-2. Flutter `pubspec.yaml`；
-3. 原生 Xcode 的 `xcodebuild -showBuildSettings -json`。
-
-原生工程出现多个 workspace、project 或 scheme 时会明确失败并要求指定，不会猜目标。schema 1–7 继续读取和验证，绝不自动迁移或重写已填写表单。关键词遵守 Apple 的完整字段 `100 UTF-8 bytes` 限制。
+Bind a release form to a Flutter or native Xcode project:
 
 ```bash
 python3 plugins/ios-application-development-skills/skills/ios-appstore-release-manager/scripts/release_form.py \
@@ -88,9 +107,18 @@ python3 plugins/ios-application-development-skills/skills/ios-appstore-release-m
   --workspace App.xcworkspace --scheme App --configuration Release
 ```
 
-发布技能保留逐字段审批、页面现值冲突确认、保存后回读和默认停在“添加以供审核”之前的边界。它不会自动提交审核。
+Release form schema 8 resolves versions in this order: explicit paired `--version` and `--build` arguments, Flutter `pubspec.yaml`, then native Xcode build settings. Existing schema 1–7 forms continue to be read and validated; this plugin never rewrites or migrates them automatically.
 
-## 上游同步与验证
+## Requirements and compatibility
+
+The plugin configures XcodeBuildMCP, so macOS, Xcode, Node.js/npm/npx, and an available iOS Simulator are required for Simulator workflows. The MCP service may start even for non-development tasks; disable the plugin temporarily in Codex if that is not wanted.
+
+> [!IMPORTANT]
+> The byte-preserved OpenAI upstream MCP configuration uses `xcodebuildmcp@latest`. Its API can evolve independently of the skill text. Before Simulator work, inspect the currently exposed tool schema; if a required capability is missing or incompatible, stop and report it rather than guessing. See [the compatibility note](plugins/ios-application-development-skills/XCODEBUILDMCP_COMPATIBILITY.md).
+
+## Keep the upstream snapshot healthy
+
+The repository checks OpenAI `main` weekly. A change creates a review PR only; it is never merged automatically.
 
 ```bash
 python3 scripts/sync_openai_ios_skills.py \
@@ -102,23 +130,8 @@ python3 -m unittest discover \
 python3 scripts/validate_bundle.py
 ```
 
-完整第三方来源、许可证、固定提交与哈希记录见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 `OPENAI_UPSTREAM.json`。
+Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [`OPENAI_UPSTREAM.json`](plugins/ios-application-development-skills/OPENAI_UPSTREAM.json) for licenses, sources, fixed commits, and file hashes.
 
----
+## License
 
-## English Summary
-
-This repository is a public Codex Git Marketplace named `flaqai-ios`. Its single plugin, `ios-application-development-skills` v0.1.0, bundles two Flaq AI skills—Apple-only App Store ASO and safe App Store release localization—with all nine OpenAI Build iOS Apps v0.1.2 skills and XcodeBuildMCP configuration.
-
-Install it with:
-
-```bash
-codex plugin marketplace add flaqai/ios-application-development-skills --ref main
-codex plugin add ios-application-development-skills@flaqai-ios
-```
-
-Use `$app-store-aso` for evidence-backed Apple listing audits and an approval-gated `aso-handoff.json`. Use `$ios-appstore-release-manager` for schema 8 Flutter/Xcode release forms, localization, validation, build binding, and safe App Store Connect drafting. Use the nine upstream-named skills for App Intents, Simulator debugging/browser mirroring, ETTrace, memgraphs, Liquid Glass, and SwiftUI implementation/refactoring/performance review.
-
-Because the byte-preserved upstream MCP configuration uses `xcodebuildmcp@latest`, inspect the currently exposed MCP tool schemas before Simulator work and stop when a required capability is missing or incompatible. See the repository's XcodeBuildMCP compatibility note for the current point-in-time finding.
-
-The weekly sync workflow opens a review PR when OpenAI `main` changes; it never auto-merges. This repository is MIT licensed, with third-party notices retained.
+This repository is released under the [MIT License](LICENSE). Third-party notices are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
