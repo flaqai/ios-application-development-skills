@@ -1,0 +1,20 @@
+{
+  "name": "flaqai-ios",
+  "interface": {
+    "displayName": "Flaq AI iOS Skills"
+  },
+  "plugins": [
+    {
+      "name": "ios-application-development-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ios-application-development-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

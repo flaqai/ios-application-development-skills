@@ -1,0 +1,28 @@
+{
+  "name": "ios-application-development-skills",
+  "version": "0.1.0",
+  "description": "Build, optimize, localize, debug, profile, and safely release iOS apps with eleven Codex skills.",
+  "author": {
+    "name": "Flaq AI",
+    "url": "https://github.com/flaqai"
+  },
+  "homepage": "https://github.com/flaqai/ios-application-development-skills",
+  "repository": "https://github.com/flaqai/ios-application-development-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "iOS Application Development Skills",
+    "shortDescription": "Build, optimize, localize, debug, and release iOS apps",
+    "longDescription": "Eleven skills for App Store ASO and release localization plus OpenAI's complete Build iOS Apps v0.1.2 skill set for SwiftUI, Simulator, App Intents, debugging, and profiling.",
+    "developerName": "Flaq AI",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/flaqai/ios-application-development-skills",
+    "defaultPrompt": [
+      "Audit and optimize this Apple App Store listing.",
+      "Prepare and localize this iOS App Store release safely.",
+      "Inspect current XcodeBuildMCP tool schemas, then build, review, or debug this SwiftUI app in Simulator."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Application Development Skills"
+  short_description: "Build, optimize, localize, debug, and release iOS apps"
+  default_prompt: "Use this iOS skills bundle to build, optimize, localize, debug, profile, or safely release the current app. Before Simulator work, inspect the currently exposed XcodeBuildMCP tool schemas and stop on incompatible or missing capabilities."

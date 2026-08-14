@@ -1,0 +1,73 @@
+name: Sync OpenAI iOS skills
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: macos-latest
+    steps:
+      - name: Check out marketplace
+        uses: actions/checkout@v4
+
+      - name: Check out OpenAI plugins main
+        uses: actions/checkout@v4
+        with:
+          repository: openai/plugins
+          ref: main
+          path: .upstream/openai-plugins
+
+      - name: Synchronize allowlisted files
+        id: sync
+        shell: bash
+        run: |
+          upstream_sha="$(git -C .upstream/openai-plugins rev-parse HEAD)"
+          python3 scripts/sync_openai_ios_skills.py \
+            --source .upstream/openai-plugins/plugins/build-ios-apps \
+            --target plugins/ios-application-development-skills \
+            --upstream-sha "$upstream_sha" \
+            --notice THIRD_PARTY_NOTICES.md
+          echo "upstream_sha=$upstream_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Validate synchronized hashes
+        run: >-
+          python3 scripts/sync_openai_ios_skills.py
+          --target plugins/ios-application-development-skills
+          --check
+
+      - name: Create review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UPSTREAM_SHA: ${{ steps.sync.outputs.upstream_sha }}
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No upstream changes."
+            exit 0
+          fi
+          branch="automation/sync-openai-ios-${UPSTREAM_SHA:0:12}"
+          existing_pr="$(gh pr list --head "$branch" --state open --json number --jq 'length')"
+          if [[ "$existing_pr" != "0" ]]; then
+            echo "A review PR already exists for $branch."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add plugins/ios-application-development-skills/.mcp.json \
+            plugins/ios-application-development-skills/skills \
+            plugins/ios-application-development-skills/OPENAI_UPSTREAM.json \
+            THIRD_PARTY_NOTICES.md
+          git commit -m "chore: sync OpenAI iOS skills ${UPSTREAM_SHA:0:12}"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --title "chore: sync OpenAI iOS skills ${UPSTREAM_SHA:0:12}" \
+            --body "Automated weekly sync from OpenAI plugins main. Review required; this workflow never auto-merges." \
+            --base main \
+            --head "$branch"
