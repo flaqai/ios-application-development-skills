@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/ios-development-skills-hero.png" alt="iOS Application Development Skills：App Store 发布、ASO、SwiftUI 与 Simulator 工作流" width="100%">
+  <img src="assets/ios-development-skills-hero-v5.png" alt="iOS Application Development Skills：App Store 发布、ASO、SwiftUI 与 Simulator 工作流" width="100%">
 </p>
 
 <h1 align="center">iOS Application Development Skills</h1>

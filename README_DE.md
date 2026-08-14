@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/ios-development-skills-hero.png" alt="iOS Application Development Skills" width="100%"></p>
+<p align="center"><img src="assets/ios-development-skills-hero-v5.png" alt="iOS Application Development Skills" width="100%"></p>
 
 <h1 align="center">iOS Application Development Skills</h1>
 
